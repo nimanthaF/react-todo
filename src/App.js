@@ -1,4 +1,5 @@
 import Todos from './components/Todos';
+import Header from './components/layout/Header';
 
 import './App.css';
 import { Component } from 'react';
@@ -40,6 +41,7 @@ class App extends Component{
     );
   }
 
+  //delete function
   delTodo=(id)=>{
     this.setState(
       {
@@ -52,6 +54,7 @@ class App extends Component{
 
     return(
       <div className="App">
+        <Header />
         <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
       </div>
     );
