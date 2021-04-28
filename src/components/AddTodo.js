@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
 
 export class AddTodo extends Component {
+    state={
+        title:''
+    }
+
+    onChange=(e)=>this.setState(
+        {
+            [e.target.name]:e.target.value
+        }
+    );
     render() {
         return (
             <form>
@@ -8,7 +17,8 @@ export class AddTodo extends Component {
                     type='text'
                     name='title'
                     style={{flex:'10',padding:'5px'}}
-                    placeholder='Add Todo...'    
+                    placeholder='Add Todo...'  
+                    onChange={this.onChange}  
                 />
                 <input 
                     type='submit'
