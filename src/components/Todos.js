@@ -18,7 +18,9 @@ class Todos extends Component{
 
 //Prop-types
 Todos.propTypes={
-  todos:Proptypes.array.isRequired
+  todos:Proptypes.array.isRequired,
+  markComplete:Proptypes.func.isRequired,
+  delTodo:Proptypes.func.isRequired,
 }
 
 export default Todos;
